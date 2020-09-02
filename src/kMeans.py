@@ -87,7 +87,7 @@ class kMeans:
                     count+=1
 
             if count == 0:
-                print('Oh no! We have a empty cluster.')
+                print('Oh no! We have a empty cluster. This algo is not ready for this.')
                 # debug
                 # instIdx = dataSize
                 # print("............")
