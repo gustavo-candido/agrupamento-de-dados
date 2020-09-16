@@ -8,9 +8,9 @@ from InputOutput import InputOutput
 if __name__ == "__main__":
     io = InputOutput()
     utils = Utils()
-
-    data = io.csvLoader()
-
-    dist = utils.calcDist(data)
-
+    
+    # abrindo arquivo csv
+     data = io.csvLoader()
+   
+    # executando single link
     SingleLink(data).execute()
