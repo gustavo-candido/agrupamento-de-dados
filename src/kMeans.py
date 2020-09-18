@@ -14,24 +14,15 @@ class kMeans:
             return None
 
         centroid = self.getFirstsCentroids()
-        # debug
-        # print('first centroids')
-        # print(centroid)
-        # print()
         dist = self.calcDist(centroid)
         iteration = self.assignToCluster(centroid, self.data, dist)
 
         for i in range (1,100):
             centroid = self.generateCentroids(iteration)
             if centroid == None:
-                # debug
-                # print('iteration %d' %i)
                 break
             dist = self.calcDist(centroid)
             iteration = self.assignToCluster(centroid, self.data, dist)
-            # debug
-            # print(iteration)
-            # print()
     
         return iteration
 
@@ -88,17 +79,6 @@ class kMeans:
 
             if count == 0:
                 print('Oh no! We have a empty cluster. This algo is not ready for this.')
-                # debug
-                # instIdx = dataSize
-                # print("............")
-                # clusterId.sort()
-                # xxx = set()
-
-                # for xx in clusterId:
-                #     xxx.add(xx)
-                # print(xxx)
-                # print("............")
-
                 return None
 
             for attrIdx in range(instSize):
